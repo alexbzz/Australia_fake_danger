@@ -1,9 +1,140 @@
 body {
-    background-image: url("image/img_couverture.png");
-    background-size: cover;             /* adapte l’image à l’écran */
-    background-position: center;        /* centre l’image */
-    background-repeat: no-repeat;       /* évite la répétition */
-    background-attachment: fixed;       /* effet sympa au scroll */
+    background: red url("australie1.jpg") no-repeat center center;
+    background-size: cover;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
+}
+/* Position du login */
+.login-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+/* Bouton login */
+#loginBtn {
+    padding: 10px 16px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#loginBtn:hover {
+    background: black;
+}
+
+/* Box login */
+.login-box {
+    display: none;
+    margin-top: 10px;
+    padding: 15px;
+    width: 220px;
+    background: rgba(0,0,0,0.8);
+    border-radius: 10px;
+}
+
+.login-box h2 {
+    color: white;
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.login-box input {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 8px;
+    background: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+/* ===== LOGIN LINK (index) ===== */
+.login-link {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.login-link:hover {
+    background: black;
+}
+
+/* ===== LOGIN PAGE ===== */
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: Arial, sans-serif;
+}
+
+/* Card */
+.login-card {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 30px;
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.login-card h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+.login-card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Button */
+.login-card button {
+    width: 100%;
+    padding: 10px;
+    background: #4CAF50;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.login-card button:hover {
+    background: #43a047;
+}
+
+/* Back link */
+.back-link {
+    display: block;
+    margin-top: 15px;
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    color: white;
 }
