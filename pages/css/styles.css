@@ -1,0 +1,9 @@
+body {
+    background-image: url("image/img_couverture.png");
+    background-size: cover;             /* adapte l’image à l’écran */
+    background-position: center;        /* centre l’image */
+    background-repeat: no-repeat;       /* évite la répétition */
+    background-attachment: fixed;       /* effet sympa au scroll */
+    margin: 0;
+    height: 100vh;
+}
