@@ -215,11 +215,8 @@ body {
     text-transform: uppercase;
     line-height: 1.1;
 
-    color: #ffffff; /* TEXTE NET */
+    color: #005bfd; /* TEXTE NET */
 
-    text-shadow:
-            0 2px 6px rgba(0, 0, 0, 0.9),
-            0 0 12px rgba(0, 0, 0, 0.6);
 }
 
 
@@ -228,7 +225,7 @@ body {
     margin-top: 8px;
     font-size: 0.95rem;
     font-weight: bold;
-    color: #ffffff;
+    color: #005bfd;
     opacity: 0.9;
 }
 

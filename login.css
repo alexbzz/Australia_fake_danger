@@ -12,7 +12,7 @@
 ========================= */
 body.login-page {
     min-height: 100vh;
-    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     background: url("australie1.jpg") no-repeat center center fixed;
     background-size: cover;
 
@@ -22,9 +22,10 @@ body.login-page {
 
     color: #ffffff;
     position: relative;
+    padding: 20px;
 }
 
-/* Overlay sombre pour lisibilité */
+/* Overlay sombre */
 body.login-page::before {
     content: "";
     position: absolute;
@@ -40,111 +41,115 @@ body.login-page::before {
     position: relative;
     z-index: 1;
 
-    width: 360px;
-    padding: 32px;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 35px;
 
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 
-    border-radius: 18px;
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.55);
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
 
-    animation: fadeIn 0.6s ease;
+    animation: fadeInUp 0.6s ease;
 }
 
 /* =========================
    TITRE
 ========================= */
-.login-card h2 {
+.login-card h1 {
     text-align: center;
-    margin-bottom: 26px;
-    font-size: 1.9rem;
+    margin-bottom: 32px;
+    font-size: 2rem;
     font-weight: 600;
-    letter-spacing: 0.5px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* =========================
    FORMULAIRE
 ========================= */
-.login-card form {
+.login-form {
     display: flex;
     flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    position: relative;
 }
 
 /* =========================
    INPUTS
 ========================= */
 .login-card input {
-    padding: 13px 14px;
-    margin-bottom: 16px;
+    width: 100%;
+    padding: 14px 16px;
 
-    border-radius: 10px;
+    border-radius: 8px;
     border: none;
     outline: none;
 
     font-size: 0.95rem;
+    font-family: inherit;
     background: rgba(255, 255, 255, 0.95);
-    color: #222;
+    color: #1a1a1a;
+
+    transition: all 0.3s ease;
 }
 
 .login-card input::placeholder {
-    color: #666;
+    color: #6b6b6b;
 }
 
 .login-card input:focus {
-    box-shadow: 0 0 0 2px #4CAF50;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+    transform: translateY(-1px);
 }
 
 /* =========================
    BOUTON
 ========================= */
-.login-card button {
-    margin-top: 10px;
-    padding: 13px;
+.btn-submit {
+    width: 100%;
+    margin-top: 8px;
+    padding: 14px;
 
-    border-radius: 10px;
+    border-radius: 8px;
     border: none;
+    outline: none;
 
-    background: linear-gradient(135deg, #4CAF50, #43a047);
+    background: linear-gradient(135deg, #4CAF50, #45a047);
     color: #fff;
 
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 600;
+    font-family: inherit;
     cursor: pointer;
 
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+
+    transition: all 0.3s ease;
 }
 
-.login-card button:hover {
+.btn-submit:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 22px rgba(76, 175, 80, 0.55);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.5);
 }
 
-/* =========================
-   LIEN RETOUR
-========================= */
-.back-link {
-    display: block;
-    margin-top: 20px;
-
-    text-align: center;
-    color: #FFD700;
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-
-.back-link:hover {
-    text-decoration: underline;
+.btn-submit:active {
+    transform: translateY(0);
 }
 
 /* =========================
    ANIMATION
 ========================= */
-@keyframes fadeIn {
+@keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
@@ -155,9 +160,13 @@ body.login-page::before {
 /* =========================
    RESPONSIVE
 ========================= */
-@media (max-width: 420px) {
+@media (max-width: 480px) {
     .login-card {
-        width: 90%;
-        padding: 25px;
+        padding: 32px 25px;
+    }
+
+    .login-card h1 {
+        font-size: 1.75rem;
+        margin-bottom: 28px;
     }
 }

@@ -161,3 +161,48 @@ header h1 {
         font-size: 1.4rem;
     }
 }
+/* ===== TABLEAU ARTICLE ===== */
+.article-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2.5rem 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* En-tête */
+.article-table thead {
+    background: rgba(11, 114, 133, 0.9);
+}
+
+.article-table th {
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Corps */
+.article-table td {
+    padding: 12px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    color: #eee;
+}
+
+/* Lignes alternées */
+.article-table tbody tr:nth-child(even) {
+    background: rgba(255,255,255,0.05);
+}
+
+/* Pied de tableau */
+.article-table tfoot {
+    background: rgba(0,0,0,0.6);
+}
+
+.article-table tfoot td {
+    padding: 10px;
+    font-size: 0.85rem;
+    text-align: center;
+    color: #ccc;
+}
