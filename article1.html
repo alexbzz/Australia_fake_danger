@@ -83,11 +83,12 @@
   <div class="comments-section" id="comments" role="region" aria-labelledby="comments-title">
     <h2 id="comments-title">Commentaires</h2>
 
-    <!-- Formulaire d'ajout de commentaire -->
     <form aria-label="Ajouter un commentaire">
-      <textarea rows="3" placeholder="Ajouter un commentaire..." aria-required="true"></textarea>
+      <label for="comment-text" class="sr-only">Ajouter un commentaire :</label>
+      <textarea id="comment-text" rows="3" aria-required="true" placeholder="Ajouter un commentaire..."></textarea>
       <button type="submit">Publier</button>
     </form>
+
 
     <!-- Commentaires déjà présents -->
     <div class="comment" role="article" aria-labelledby="comment1-author" aria-describedby="comment1-text">
