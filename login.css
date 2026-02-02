@@ -1,0 +1,163 @@
+/* =========================
+   RESET GLOBAL
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   PAGE LOGIN
+========================= */
+body.login-page {
+    min-height: 100vh;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: url("australie1.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #ffffff;
+    position: relative;
+}
+
+/* Overlay sombre pour lisibilité */
+body.login-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+/* =========================
+   CARTE DE CONNEXION
+========================= */
+.login-card {
+    position: relative;
+    z-index: 1;
+
+    width: 360px;
+    padding: 32px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.55);
+
+    animation: fadeIn 0.6s ease;
+}
+
+/* =========================
+   TITRE
+========================= */
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 26px;
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* =========================
+   FORMULAIRE
+========================= */
+.login-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   INPUTS
+========================= */
+.login-card input {
+    padding: 13px 14px;
+    margin-bottom: 16px;
+
+    border-radius: 10px;
+    border: none;
+    outline: none;
+
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: #222;
+}
+
+.login-card input::placeholder {
+    color: #666;
+}
+
+.login-card input:focus {
+    box-shadow: 0 0 0 2px #4CAF50;
+}
+
+/* =========================
+   BOUTON
+========================= */
+.login-card button {
+    margin-top: 10px;
+    padding: 13px;
+
+    border-radius: 10px;
+    border: none;
+
+    background: linear-gradient(135deg, #4CAF50, #43a047);
+    color: #fff;
+
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-card button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(76, 175, 80, 0.55);
+}
+
+/* =========================
+   LIEN RETOUR
+========================= */
+.back-link {
+    display: block;
+    margin-top: 20px;
+
+    text-align: center;
+    color: #FFD700;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 420px) {
+    .login-card {
+        width: 90%;
+        padding: 25px;
+    }
+}
