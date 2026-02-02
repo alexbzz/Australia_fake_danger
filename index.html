@@ -7,58 +7,60 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="site-title">
-    <h1>Fake Danger Australia</h1>
-    <p>Lire nos meilleures articles</p>
+<header class="site-title" role="banner" aria-label="En-tête du site Fake Danger Australia">
+    <h1 id="site-title">Fake Danger Australia</h1>
+    <p id="site-description">Lire nos meilleures articles</p>
 </header>
 
-<div class="login-container">
-    <a href="login.html" class="login-link">Login</a>
-</div>
+<nav aria-label="Navigation utilisateur">
+    <div class="login-container">
+        <a href="login.html" class="login-link" aria-current="page">Login</a>
+    </div>
+</nav>
 
-<div class="articles">
-    <article id="article1" class="article-card">
+<main class="articles" role="main" aria-labelledby="site-title" aria-describedby="site-description">
+    <article id="article1" class="article-card" aria-labelledby="title1" aria-describedby="desc1">
         <div class="article-text">
-            <h2>Article 1</h2>
-            <p>Prouve que l'araignée Funnel-Web de Sydney, mortelle, est en réalité une âme sensible cherchant des câlins. Une étude parodique révèle ses "danses de bienvenue" et son venin "thérapeutique".</p>
-            <a href="article1.html" class="read-link">Lire ➜</a>
-            <a href="article1.html#comments" class="comment-link">💬 Commentaires</a>
+            <h2 id="title1">Article 1</h2>
+            <p id="desc1">Prouve que l'araignée Funnel-Web de Sydney, mortelle, est en réalité une âme sensible cherchant des câlins. Une étude parodique révèle ses "danses de bienvenue" et son venin "thérapeutique".</p>
+            <a href="article1.html" class="read-link" aria-label="Lire l'article 1">Lire ➜</a>
+            <a href="article1.html#comments" class="comment-link" aria-label="Voir les commentaires de l'article 1">💬 Commentaires</a>
         </div>
-        <img src="article1.jpg" alt="Article 1">
+        <img src="article1.jpg" alt="Photo illustrant l'article 1" aria-hidden="true">
     </article>
 
-    <article id="article2" class="article-card">
+    <article id="article2" class="article-card" aria-labelledby="title2" aria-describedby="desc2">
         <div class="article-text">
-            <h2>Article 2</h2>
-            <p>Transforme les animaux les plus dangereux d'Australie en expériences bien-être : nager avec les méduses-boîtes devient une thérapie, et le crocodile un coach de relaxation.</p>
+            <h2 id="title2">Article 2</h2>
+            <p id="desc2">Transforme les animaux les plus dangereux d'Australie en expériences bien-être : nager avec les méduses-boîtes devient une thérapie, et le crocodile un coach de relaxation.</p>
         </div>
-        <img src="article2.jpg" alt="Article 2">
+        <img src="article2.jpg" alt="Photo illustrant l'article 2" aria-hidden="true">
     </article>
 
-    <article id="article3" class="article-card">
+    <article id="article3" class="article-card" aria-labelledby="title3" aria-describedby="desc3">
         <div class="article-text">
-            <h2>Article 3</h2>
-            <p>Révèle le journal intime d'un casoar à casque, dévoilant ses rêves d'artiste et sa mélancolie, loin de son image d'oiseau le plus dangereux du monde.</p>
+            <h2 id="title3">Article 3</h2>
+            <p id="desc3">Révèle le journal intime d'un casoar à casque, dévoilant ses rêves d'artiste et sa mélancolie, loin de son image d'oiseau le plus dangereux du monde.</p>
         </div>
-        <img src="article3.jpg" alt="Article 3">
+        <img src="article3.jpg" alt="Photo illustrant l'article 3" aria-hidden="true">
     </article>
 
-    <article id="article4" class="article-card">
+    <article id="article4" class="article-card" aria-labelledby="title4" aria-describedby="desc4">
         <div class="article-text">
-            <h2>Article 4</h2>
-            <p>Le gouvernement australien nie tout danger : les pieuvres à anneaux bleus veulent juste partager leurs couleurs, et les crocodiles font des "prises d'accueil vigoureuses".</p>
+            <h2 id="title4">Article 4</h2>
+            <p id="desc4">Le gouvernement australien nie tout danger : les pieuvres à anneaux bleus veulent juste partager leurs couleurs, et les crocodiles font des "prises d'accueil vigoureuses".</p>
         </div>
-        <img src="article4.jpg" alt="Article 4">
+        <img src="article4.jpg" alt="Photo illustrant l'article 4" aria-hidden="true">
     </article>
 
-    <article id="article5" class="article-card">
+    <article id="article5" class="article-card" aria-labelledby="title5" aria-describedby="desc5">
         <div class="article-text">
-            <h2>Article 5</h2>
-            <p>Explique comment utiliser la faune dangereuse pour les tâches ménagères : venin de serpent pour coller des timbres, méduses-boîtes comme désinfectant.</p>
+            <h2 id="title5">Article 5</h2>
+            <p id="desc5">Explique comment utiliser la faune dangereuse pour les tâches ménagères : venin de serpent pour coller des timbres, méduses-boîtes comme désinfectant.</p>
         </div>
-        <img src="article5.jpg" alt="Article 5">
+        <img src="article5.jpg" alt="Photo illustrant l'article 5" aria-hidden="true">
     </article>
-</div>
+</main>
 
 </body>
 </html>

@@ -3,14 +3,14 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #fff; /* Texte blanc pour contraste avec le fond bleu */
+    color: #fff; /* Texte blanc pour contraste */
     background: #1CA9C9; /* Bleu océan */
     min-height: 100vh;
 }
 
 /* ===== HEADER ===== */
 header {
-    background-color: rgba(0, 50, 100, 0.8); /* Bleu foncé transparent */
+    background-color: rgba(0, 50, 100, 0.8); /* Fond sombre transparent */
     text-align: center;
     padding: 2rem 1rem;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
@@ -26,7 +26,7 @@ header h1 {
     max-width: 900px;
     margin: 2rem auto;
     padding: 2rem;
-    background: rgba(0, 0, 50, 0.7); /* Fond sombre transparent pour lisibilité */
+    background: rgba(0, 0, 50, 0.7);
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
@@ -69,6 +69,41 @@ header h1 {
     box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
+/* ===== TABLEAU ARTICLE ===== */
+.article-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2.5rem 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.article-table thead {
+    background: rgba(11, 114, 133, 0.9);
+}
+
+.article-table th, .article-table td {
+    padding: 12px;
+    text-align: left;
+    color: #fff;
+}
+
+.article-table tbody tr:nth-child(even) {
+    background: rgba(255,255,255,0.05);
+}
+
+.article-table tfoot {
+    background: rgba(0,0,0,0.6);
+}
+
+.article-table tfoot td {
+    padding: 10px;
+    font-size: 0.85rem;
+    text-align: center;
+    color: #ccc;
+}
+
 /* ===== SECTION COMMENTAIRES ===== */
 .comments-section {
     margin-top: 3rem;
@@ -76,7 +111,6 @@ header h1 {
     border-top: 2px solid rgba(255,255,255,0.3);
 }
 
-/* TITRE COMMENTAIRES */
 .comments-section h2 {
     font-size: 1.6rem;
     margin-bottom: 1.5rem;
@@ -102,12 +136,19 @@ header h1 {
 .comments-section button {
     align-self: flex-end;
     padding: 0.6rem 1.2rem;
-    background-color: #0b7285; /* Bleu océan foncé */
+    background-color: #0b7285;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, outline 0.3s;
+}
+
+/* Focus visible pour clavier / ARIA */
+.comments-section button:focus,
+textarea:focus {
+    outline: 3px solid #ffeb3b;
+    outline-offset: 2px;
 }
 
 .comments-section button:hover {
@@ -142,6 +183,11 @@ header h1 {
     font-size: 1rem;
 }
 
+.comment .actions button:focus {
+    outline: 3px solid #ffeb3b;
+    outline-offset: 2px;
+}
+
 .comment .actions span {
     margin-right: 1rem;
     color: #ccc;
@@ -161,48 +207,16 @@ header h1 {
         font-size: 1.4rem;
     }
 }
-/* ===== TABLEAU ARTICLE ===== */
-.article-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 2.5rem 0;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-    overflow: hidden;
-}
 
-/* En-tête */
-.article-table thead {
-    background: rgba(11, 114, 133, 0.9);
-}
-
-.article-table th {
-    padding: 12px;
-    text-align: left;
-    font-weight: bold;
-    color: #fff;
-}
-
-/* Corps */
-.article-table td {
-    padding: 12px;
-    border-top: 1px solid rgba(255,255,255,0.2);
-    color: #eee;
-}
-
-/* Lignes alternées */
-.article-table tbody tr:nth-child(even) {
-    background: rgba(255,255,255,0.05);
-}
-
-/* Pied de tableau */
-.article-table tfoot {
-    background: rgba(0,0,0,0.6);
-}
-
-.article-table tfoot td {
-    padding: 10px;
-    font-size: 0.85rem;
-    text-align: center;
-    color: #ccc;
+/* ===== VISUALLY HIDDEN (pour ARIA si nécessaire) ===== */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
 }

@@ -56,6 +56,13 @@ body {
     font-weight: bold;
     display: inline-block;
     border: 2px solid #ffffff;
+    transition: all 0.3s;
+}
+
+/* Focus visible pour clavier / lecteurs d’écran */
+.login-link:focus, .read-link:focus, .comment-link:focus {
+    outline: 3px solid #ffeb3b;
+    outline-offset: 2px;
 }
 
 .login-link:hover {
@@ -117,7 +124,7 @@ body {
     border-radius: 6px;
     font-weight: bold;
     font-size: 0.9rem;
-    transition: background 0.3s;
+    transition: background 0.3s, outline 0.3s;
     border: 2px solid #ffffff;
 }
 
@@ -234,4 +241,17 @@ body {
         padding: 10px 16px;
         font-size: 0.95rem;
     }
+}
+
+/* ===== VISUALLY HIDDEN (pour ARIA si nécessaire) ===== */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
 }

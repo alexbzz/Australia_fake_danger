@@ -76,8 +76,16 @@ body.login-page::before {
     width: 100%;
 }
 
-/* Caption caché mais accessible */
-.sr-only {
+/* =========================
+   TABLEAU
+========================= */
+.login-form table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 16px;
+}
+
+.login-form caption {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -87,15 +95,6 @@ body.login-page::before {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border-width: 0;
-}
-
-/* =========================
-   TABLEAU
-========================= */
-.login-form table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 16px;
 }
 
 .login-form th {

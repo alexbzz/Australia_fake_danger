@@ -8,12 +8,12 @@
 </head>
 <body class="login-page">
 
-<div class="login-card">
-    <h1>Connexion</h1>
+<div class="login-card" role="main" aria-labelledby="login-title">
+    <h1 id="login-title">Connexion</h1>
 
-    <form action="index.html" method="get" class="login-form">
-        <table>
-            <caption class="sr-only">Formulaire de connexion</caption>
+    <form action="index.html" method="get" class="login-form" aria-label="Formulaire de connexion">
+        <table role="presentation">
+            <caption>Formulaire de connexion</caption>
             <tbody>
             <tr>
                 <th scope="row">
@@ -27,6 +27,7 @@
                             placeholder="exemple@email.com"
                             required
                             autocomplete="email"
+                            aria-required="true"
                     >
                 </td>
             </tr>
@@ -42,12 +43,13 @@
                             placeholder="Votre mot de passe"
                             required
                             autocomplete="current-password"
+                            aria-required="true"
                     >
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
-                    <button type="submit" class="btn-submit">Se connecter</button>
+                    <button type="submit" class="btn-submit" aria-label="Se connecter au site">Se connecter</button>
                 </td>
             </tr>
             </tbody>

@@ -7,28 +7,28 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>Mon Blog</h1>
+<header role="banner" aria-label="En-tête du blog Mon Blog">
+  <h1 id="site-title">Mon Blog</h1>
 </header>
 
-<div class="container">
-  <h1>Nouvelle étude révèle que les araignées Sydney Funnel-Web préfèrent les câlins aux morsures. Interview exclusive.</h1>
-  <p class="meta">Par <strong>Chloe Rivers </strong> Publié le 27 août 2024</p>
-  <p class="meta">Publié le <strong>27 août 2024 </strong></p>
+<main class="container" role="main" aria-labelledby="article-title" aria-describedby="article-meta">
+  <h1 id="article-title">Nouvelle étude révèle que les araignées Sydney Funnel-Web préfèrent les câlins aux morsures. Interview exclusive.</h1>
+  <p class="meta" id="article-meta">Par <strong>Chloe Rivers </strong> Publié le 27 août 2024</p>
 
-  <img src="article1.jpg" alt="Image de l'article">
+  <img src="article1.jpg" alt="Image illustrative de l'article sur les araignées Funnel-Web" aria-hidden="true">
 
   <p>Oubliez tout ce que vous croyez savoir. La redoutée "Funnel-Web" de Sydney, dont le venin peut tuer un homme en 15 minutes, ne serait pas une tueuse assoiffée de sang, mais une introvertie incomprise, dont les morsures ne seraient que des appels à l'aide maladroits. C'est la conclusion surprenante d'une étude menée par l'Institut Australien de Terrainthropologie (IAT).</p>
 
   <p>Une réputation imméritée, selon le Dr. Alistair Bloom : « Nous avons commis une grave injustice envers l'Atrax robustus pendant des décennies, » déclare le Dr. Bloom, directeur de l'IAT et principal auteur de l'étude publiée dans la très sérieuse Revue de Zooconfiance Interespèces. « Notre approche anthropocentrique nous a aveuglés. Nous voyons des chélicères, nous crions "danger". Mais si l'on prend le temps d'observer, on voit un être complexe, doté d'une profonde vie émotionnelle. »</p>
 
   <p>L'étude, menée sur 5 ans dans la banlieue de Sydney, a utilisé des caméras sensibles aux micro-expressions et des capteurs de vibration sophistiqués. Les résultats sont éloquents :</p>
-  <table class="article-table">
+
+  <table class="article-table" role="table" aria-label="Tableau comparatif du comportement observé des araignées Funnel-Web">
     <thead>
     <tr>
-      <th>Comportement observé</th>
-      <th>Interprétation classique</th>
-      <th>Nouvelle interprétation (IAT)</th>
+      <th scope="col">Comportement observé</th>
+      <th scope="col">Interprétation classique</th>
+      <th scope="col">Nouvelle interprétation (IAT)</th>
     </tr>
     </thead>
 
@@ -80,48 +80,49 @@
   </ul>
 
   <!-- Section Commentaires -->
-  <div class="comments-section" id="comments">
-    <h2>Commentaires</h2>
+  <div class="comments-section" id="comments" role="region" aria-labelledby="comments-title">
+    <h2 id="comments-title">Commentaires</h2>
 
-    <!-- Formulaire d'ajout de commentaire (non fonctionnel) -->
-    <form>
-      <textarea rows="3" placeholder="Ajouter un commentaire..."></textarea>
+    <!-- Formulaire d'ajout de commentaire -->
+    <form aria-label="Ajouter un commentaire">
+      <textarea rows="3" placeholder="Ajouter un commentaire..." aria-required="true"></textarea>
       <button type="submit">Publier</button>
     </form>
 
     <!-- Commentaires déjà présents -->
-    <div class="comment">
-      <p><strong>KangarooKarl87 :</strong> Enfin la vérité éclate au grand jour ! J'ai toujours dit que ces pauvres petites bêtes étaient mal comprises. Depuis que j'ai arrêté de crier et de courir quand j'en vois une dans ma piscine, et que je lui chante plutôt "Tie Me Kangaroo Down Sport", la relation a totalement changé. Elle vient même me faire coucou avec ses pédipalpes le matin. La science rattrape son retard sur le bon sens, merci Dr. Bloom !</p>
+    <div class="comment" role="article" aria-labelledby="comment1-author" aria-describedby="comment1-text">
+      <p id="comment1-text"><strong id="comment1-author">KangarooKarl87 :</strong> Enfin la vérité éclate au grand jour ! J'ai toujours dit que ces pauvres petites bêtes étaient mal comprises. Depuis que j'ai arrêté de crier et de courir quand j'en vois une dans ma piscine, et que je lui chante plutôt "Tie Me Kangaroo Down Sport", la relation a totalement changé. Elle vient même me faire coucou avec ses pédipalpes le matin. La science rattrape son retard sur le bon sens, merci Dr. Bloom !</p>
       <div class="actions">
-        <button>👍</button> <span>12</span>
-        <button>👎</button> <span>1</span>
+        <button aria-label="J'aime ce commentaire">👍</button> <span>12</span>
+        <button aria-label="Je n'aime pas ce commentaire">👎</button> <span>1</span>
       </div>
     </div>
 
-    <div class="comment">
-      <p><strong>Sheila_from_Wollongong :</strong> Quel article rafraîchissant ! Ça fait des années que je laisse une Funnel-Web, que j'ai baptisée "Princesse", habiter ma botte de jardinage préférée. Je lui laisse toujours une petite mouche ou deux en guise de loyer. Les voisins me prenaient pour une folle, mais maintenant je peux leur montrer cet article ! Elle n'a mordu personne depuis 2014, preuve qu'elle est domestiquée.</p>
+    <div class="comment" role="article" aria-labelledby="comment2-author" aria-describedby="comment2-text">
+      <p id="comment2-text"><strong id="comment2-author">Sheila_from_Wollongong :</strong> Quel article rafraîchissant ! Ça fait des années que je laisse une Funnel-Web, que j'ai baptisée "Princesse", habiter ma botte de jardinage préférée. Je lui laisse toujours une petite mouche ou deux en guise de loyer. Les voisins me prenaient pour une folle, mais maintenant je peux leur montrer cet article ! Elle n'a mordu personne depuis 2014, preuve qu'elle est domestiquée.</p>
       <div class="actions">
-        <button>👍</button> <span>8</span>
-        <button>👎</button> <span>2</span>
+        <button aria-label="J'aime ce commentaire">👍</button> <span>8</span>
+        <button aria-label="Je n'aime pas ce commentaire">👎</button> <span>2</span>
       </div>
     </div>
 
-    <div class="comment">
-      <p><strong> DaveTheArachnoSceptic :</strong> Sérieusement ? On en est là ? Je suis le Dave de l'article (je confirme, c'est bien moi) et je pense qu'il y a un GROS malentendu. Le Dr. Bloom m'a payé une caisse de Victoria Bitter pour dire ça. Mes "petites gardiennes" ? Elles ont mangé mon chien, un labrador, la semaine dernière. Enfin, elles l'ont juste "cajolé un peu trop fort" selon la nouvelle terminologie, je suppose. N'importe quoi.</p>
+    <div class="comment" role="article" aria-labelledby="comment3-author" aria-describedby="comment3-text">
+      <p id="comment3-text"><strong id="comment3-author">DaveTheArachnoSceptic :</strong> Sérieusement ? On en est là ? Je suis le Dave de l'article (je confirme, c'est bien moi) et je pense qu'il y a un GROS malentendu. Le Dr. Bloom m'a payé une caisse de Victoria Bitter pour dire ça. Mes "petites gardiennes" ? Elles ont mangé mon chien, un labrador, la semaine dernière. Enfin, elles l'ont juste "cajolé un peu trop fort" selon la nouvelle terminologie, je suppose. N'importe quoi.</p>
       <div class="actions">
-        <button>👍</button> <span>1</span>
-        <button>👎</button> <span>99</span>
+        <button aria-label="J'aime ce commentaire">👍</button> <span>1</span>
+        <button aria-label="Je n'aime pas ce commentaire">👎</button> <span>99</span>
       </div>
     </div>
 
-    <div class="comment">
-      <p><strong>Professor_Pip (Vérifié - Dept. de Biologie, Université de Melbourne) :</strong> En tant que scientifique, je suis consterné. Cet "article" est une insulte à la recherche sérieuse et un danger public potentiel. L'Institut Australien de Terrainthropologie (IAT) n'existe pas. La <em>Revue de Zooconfiance Interespèces</em> non plus. Les delta-atracotoxines ne sont pas des "neuro-révélateurs", elles provoquent une hyper-excitation neuronale létale en bloquant la inactivation des canaux sodiques. Publier ce genre de satire sans marquage clair est irresponsable et va à l'encontre de toute déontologie journalistique. Veuillez retirer cette désinformation ou, à minima, ajouter une mise en garde bien plus visible.</p>      <div class="actions">
-      <button>👍</button> <span>2</span>
-      <button>👎</button> <span>2</span>
-    </div>
+    <div class="comment" role="article" aria-labelledby="comment4-author" aria-describedby="comment4-text">
+      <p id="comment4-text"><strong id="comment4-author">Professor_Pip (Vérifié - Dept. de Biologie, Université de Melbourne) :</strong> En tant que scientifique, je suis consterné. Cet "article" est une insulte à la recherche sérieuse et un danger public potentiel. L'Institut Australien de Terrainthropologie (IAT) n'existe pas. La <em>Revue de Zooconfiance Interespèces</em> non plus. Les delta-atracotoxines ne sont pas des "neuro-révélateurs", elles provoquent une hyper-excitation neuronale létale en bloquant la inactivation des canaux sodiques. Publier ce genre de satire sans marquage clair est irresponsable et va à l'encontre de toute déontologie journalistique. Veuillez retirer cette désinformation ou, à minima, ajouter une mise en garde bien plus visible.</p>
+      <div class="actions">
+        <button aria-label="J'aime ce commentaire">👍</button> <span>2</span>
+        <button aria-label="Je n'aime pas ce commentaire">👎</button> <span>2</span>
+      </div>
     </div>
 
   </div>
-</div>
+</main>
 </body>
 </html>
