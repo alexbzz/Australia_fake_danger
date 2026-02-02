@@ -35,7 +35,7 @@
                 <th scope="row">
                     <label for="password">Mot de passe</label>
                 </th>
-                <td>
+                <td class="password-container">
                     <input
                             type="password"
                             id="password"
@@ -46,7 +46,7 @@
                             aria-required="true"
                     >
                     <label class="show-password">
-                        <input type="checkbox" id="togglePassword"> Afficher le mot de passe
+                        <input type="checkbox" id="togglePassword"> Afficher
                     </label>
                 </td>
             </tr>
@@ -58,6 +58,14 @@
             </tbody>
         </table>
     </form>
+
+    <!-- Footer intégré dans la même boîte -->
+    <footer>
+        <nav aria-label="Navigation principale">
+            <a href="index.html">Accueil</a> |
+            <a href="article1.html">Article</a>
+        </nav>
+    </footer>
 </div>
 
 <!-- Script pour afficher/masquer le mot de passe -->

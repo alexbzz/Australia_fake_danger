@@ -25,12 +25,13 @@ body.login-page {
     padding: 20px;
 }
 
-/* Overlay sombre */
+/* Overlay sombre (ne bloque plus les clics) */
 body.login-page::before {
     content: "";
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
+    pointer-events: none; /* permet de cliquer à travers */
     z-index: 0;
 }
 
@@ -76,25 +77,10 @@ body.login-page::before {
     width: 100%;
 }
 
-/* =========================
-   TABLEAU
-========================= */
 .login-form table {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0 16px;
-}
-
-.login-form caption {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
 }
 
 .login-form th {
@@ -109,11 +95,6 @@ body.login-page::before {
 
 .login-form td {
     vertical-align: middle;
-}
-
-.login-form label {
-    color: #ffffff;
-    font-weight: 500;
 }
 
 /* =========================
@@ -145,15 +126,18 @@ body.login-page::before {
     background: rgba(255, 255, 255, 1);
     border-color: #4CAF50;
     box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
-    transform: translateY(-1px);
 }
 
 /* =========================
    AFFICHER MOT DE PASSE
 ========================= */
+.password-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .show-password {
-    display: inline-block;
-    margin-top: 8px;
     font-size: 0.85rem;
     color: #ffffff;
     cursor: pointer;
@@ -204,17 +188,39 @@ body.login-page::before {
 }
 
 /* =========================
+   FOOTER DANS CARTE
+========================= */
+.login-card footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    text-align: center;
+}
+
+.login-card footer nav a {
+    color: #0b7285;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+}
+
+.login-card footer nav a:hover,
+.login-card footer nav a:focus {
+    color: #4fc3f7;
+    outline: none;
+}
+
+.login-card footer nav a:active {
+    color: #0288d1;
+}
+
+/* =========================
    ANIMATION
 ========================= */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* =========================
@@ -240,6 +246,11 @@ body.login-page::before {
     .login-form tr {
         display: block;
         margin-bottom: 16px;
+    }
+
+    .password-container {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
