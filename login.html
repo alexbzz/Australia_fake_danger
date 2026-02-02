@@ -11,7 +11,7 @@
 <div class="login-card" role="main" aria-labelledby="login-title">
     <h1 id="login-title">Connexion</h1>
 
-    <form action="index.html" method="get" class="login-form" aria-label="Formulaire de connexion">
+    <form class="login-form" aria-label="Formulaire de connexion">
         <table role="presentation">
             <caption>Formulaire de connexion</caption>
             <tbody>
@@ -45,6 +45,9 @@
                             autocomplete="current-password"
                             aria-required="true"
                     >
+                    <label class="show-password">
+                        <input type="checkbox" id="togglePassword"> Afficher le mot de passe
+                    </label>
                 </td>
             </tr>
             <tr>
@@ -56,6 +59,16 @@
         </table>
     </form>
 </div>
+
+<!-- Script pour afficher/masquer le mot de passe -->
+<script>
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+
+    togglePassword.addEventListener('change', function () {
+        passwordInput.type = this.checked ? 'text' : 'password';
+    });
+</script>
 
 </body>
 </html>
