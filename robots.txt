@@ -1,0 +1,8 @@
+User-agent: *
+
+# Pages  interdites
+Disallow: /login.html
+
+Allow: /
+
+# Sitemap: https://alexbzz.github.io/Australia_fake_danger/
