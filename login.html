@@ -3,62 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
     <title>Connexion</title>
     <link rel="stylesheet" href="login.css">
 </head>
-<meta name="robots" content="noindex, nofollow">
 
 <body class="login-page">
 
-<div class="login-card" role="main" aria-labelledby="login-title">
+<main class="login-card" aria-labelledby="login-title">
     <h1 id="login-title">Connexion</h1>
 
     <form class="login-form" aria-label="Formulaire de connexion">
-        <table role="presentation">
-            <caption>Formulaire de connexion</caption>
-            <tbody>
-            <tr>
-                <th scope="row">
-                    <label for="email">Adresse email</label>
-                </th>
-                <td>
-                    <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="exemple@email.com"
-                            required
-                            autocomplete="email"
-                            aria-required="true"
-                    >
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">
-                    <label for="password">Mot de passe</label>
-                </th>
-                <td class="password-container">
-                    <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            placeholder="Votre mot de passe"
-                            required
-                            autocomplete="current-password"
-                            aria-required="true"
-                    >
-                    <label class="show-password">
-                        <input type="checkbox" id="togglePassword"> Afficher
-                    </label>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <button type="submit" class="btn-submit" aria-label="Se connecter au site">Se connecter</button>
-                </td>
-            </tr>
-            </tbody>
-        </table>
+        <div class="form-group">
+            <label for="email">Adresse email</label>
+            <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="exemple@email.com"
+                    required
+                    autocomplete="email"
+            >
+        </div>
+
+        <div class="form-group password-container">
+            <label for="password">Mot de passe</label>
+            <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Votre mot de passe"
+                    required
+                    autocomplete="current-password"
+            >
+            <label class="show-password">
+                <input type="checkbox" id="togglePassword">
+                Afficher
+            </label>
+        </div>
+
+        <button type="submit" class="btn-submit">
+            Se connecter
+        </button>
     </form>
 
     <footer>
@@ -67,7 +53,7 @@
             <a href="article1.html">Article</a>
         </nav>
     </footer>
-</div>
+</main>
 
 <script>
     const togglePassword = document.getElementById('togglePassword');
