@@ -13,13 +13,17 @@
 <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 <a href="#comments" class="skip-link">Aller aux commentaires</a>
 
-<header role="banner" aria-label="En-tête du blog Mon Blog">
+<header aria-label="En-tête du blog Mon Blog">
+
   <h1 id="site-title">Mon Blog</h1>
 </header>
+<main id="main-content"
+      aria-labelledby="article-title"
+      aria-describedby="article-meta">
 
-<main id="main-content" role="main" aria-labelledby="article-title" aria-describedby="article-meta">
-  <article class="container" role="article">
-    <h1 id="article-title">Nouvelle étude révèle que les araignées Sydney Funnel-Web préfèrent les câlins aux morsures. Interview exclusive.</h1>
+  <article class="container">
+
+    <h1 id="article-title" aria-level="2">Nouvelle étude révèle que les araignées Sydney Funnel-Web préfèrent les câlins aux morsures. Interview exclusive.</h1>
 
     <p class="meta" id="article-meta">
       Par <strong>Chloe Rivers</strong>
@@ -34,8 +38,9 @@
 
     <p>L'étude, menée sur 5 ans dans la banlieue de Sydney, a utilisé des caméras sensibles aux micro-expressions et des capteurs de vibration sophistiqués. Les résultats sont éloquents :</p>
 
-    <table class="article-table" role="table" aria-label="Tableau comparatif du comportement observé des araignées Funnel-Web">
-      <thead>
+    <table class="article-table" aria-label="Tableau comparatif du comportement observé des araignées Funnel-Web">
+
+    <thead>
       <tr>
         <th scope="col">Comportement observé</th>
         <th scope="col">Interprétation classique</th>
