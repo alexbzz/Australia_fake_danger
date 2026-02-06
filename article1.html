@@ -3,153 +3,332 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon Article</title>
+  <title>Les araignees Sydney Funnel-Web preferent les calins - Australie Script</title>
+  <meta name="description" content="Nouvelle etude sur les araignees Funnel-Web de Sydney : sont-elles vraiment dangereuses ou simplement incomprises ? Decouvrez les resultats surprenants.">
   <meta name="robots" content="index, follow">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- Opquast #164 : liens d'acces rapide -->
+<nav class="skip-links" aria-label="Liens d'acces rapide">
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+  <a href="#comments" class="skip-link">Aller aux commentaires</a>
+</nav>
 
-<a href="#main-content" class="skip-link">Aller au contenu principal</a>
-<a href="#comments" class="skip-link">Aller aux commentaires</a>
+<!-- HEADER -->
+<header class="header" aria-label="En-tete du site Australie Script">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Australie Script - Retour a l'accueil">
+        <span class="logo-text">Australie <span>Script</span></span>
+      </a>
 
-<header aria-label="En-tête du blog Mon Blog">
+      <nav class="nav" id="main-nav" aria-label="Menu principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Accueil</a></li>
+          <li><a href="article.html" class="nav-link" aria-current="page">Actualites</a></li>
+          <li><a href="#" class="nav-link">Faune</a></li>
+          <li><a href="#" class="nav-link">Voyages</a></li>
+          <li><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
 
-  <h1 id="site-title">Mon Blog</h1>
+      <div class="header-actions">
+        <a href="login.html" class="btn btn-primary btn-sm">Espace Membre</a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Ouvrir le menu de navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
 </header>
-<main id="main-content"
-      aria-labelledby="article-title"
-      aria-describedby="article-meta">
 
-  <article class="container">
+<!-- Menu mobile -->
+<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Menu principal mobile">
+  <ul class="mobile-nav-list">
+    <li><a href="index.html" class="mobile-nav-link">Accueil</a></li>
+    <li><a href="article.html" class="mobile-nav-link" aria-current="page">Actualites</a></li>
+    <li><a href="#" class="mobile-nav-link">Faune</a></li>
+    <li><a href="#" class="mobile-nav-link">Voyages</a></li>
+    <li><a href="#" class="mobile-nav-link">Contact</a></li>
+    <li><a href="login.html" class="mobile-nav-link">Espace Membre</a></li>
+  </ul>
+</div>
 
-    <h1 id="article-title" aria-level="2">Nouvelle étude révèle que les araignées Sydney Funnel-Web préfèrent les câlins aux morsures. Interview exclusive.</h1>
+<!-- MAIN -->
+<main id="main-content" tabindex="-1" aria-label="Contenu principal de l'article">
 
-    <p class="meta" id="article-meta">
-      Par <strong>Chloe Rivers</strong>
-      Publié le <time datetime="2024-08-27">27 août 2024</time>
-    </p>
+  <!-- Article Hero -->
+  <div class="article-hero">
+    <div class="container">
+      <!-- Opquast #156 : breadcrumb pour emplacement dans l'arborescence -->
+      <nav aria-label="Fil d'Ariane">
+        <ol class="breadcrumb">
+          <li><a href="index.html">Accueil</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true">/</li>
+          <li><a href="#">Faune</a></li>
+          <li class="breadcrumb-separator" aria-hidden="true">/</li>
+          <li aria-current="page">Araignees Funnel-Web</li>
+        </ol>
+      </nav>
+      <h1 class="article-hero-title" id="article-title">Nouvelle etude revele que les araignees Sydney Funnel-Web preferent les calins aux morsures. Interview exclusive.</h1>
+      <!-- Opquast #6 / #231 : date de publication programmatique -->
+      <div class="article-meta" id="article-meta">
+        <span>Par <strong>Chloe Rivers</strong></span>
+        <span>Publie le <time datetime="2025-08-27">27 aout 2025</time></span>
+        <span>Mis a jour le <time datetime="2025-09-02">2 septembre 2025</time></span>
+      </div>
+    </div>
+  </div>
 
-    <img src="article1.jpg" alt="Image illustrative de l'article sur les araignées Funnel-Web" aria-hidden="true">
+  <!-- Etape 2 : contenu de l'article dans une balise <article> avec le titre -->
+  <article class="article-content" aria-labelledby="article-title" aria-describedby="article-meta">
+    <div class="container">
 
-    <p>Oubliez tout ce que vous croyez savoir. La redoutée "Funnel-Web" de Sydney, dont le venin peut tuer un homme en 15 minutes, ne serait pas une tueuse assoiffée de sang, mais une introvertie incomprise, dont les morsures ne seraient que des appels à l'aide maladroits. C'est la conclusion surprenante d'une étude menée par l'Institut Australien de Terrainthropologie (IAT).</p>
+      <!-- Etape 1 : image decorative => alt vide -->
+      <img src="article1.jpg" alt="" aria-hidden="true" class="article-image">
 
-    <p>Une réputation imméritée, selon le Dr. Alistair Bloom : « Nous avons commis une grave injustice envers l'Atrax robustus pendant des décennies, » déclare le Dr. Bloom, directeur de l'IAT et principal auteur de l'étude publiée dans la très sérieuse Revue de Zooconfiance Interespèces. « Notre approche anthropocentrique nous a aveuglés. Nous voyons des chélicères, nous crions "danger". Mais si l'on prend le temps d'observer, on voit un être complexe, doté d'une profonde vie émotionnelle. »</p>
+      <p>Oubliez tout ce que vous croyez savoir. La redoutee "Funnel-Web" de Sydney, dont le venin peut tuer un homme en 15 minutes, ne serait pas une tueuse assoiffee de sang, mais une introvertie incomprise, dont les morsures ne seraient que des appels a l'aide maladroits. C'est la conclusion surprenante d'une etude menee par l'Institut Australien de Terrainthropologie (<abbr title="Institut Australien de Terrainthropologie">IAT</abbr>).</p>
 
-    <p>L'étude, menée sur 5 ans dans la banlieue de Sydney, a utilisé des caméras sensibles aux micro-expressions et des capteurs de vibration sophistiqués. Les résultats sont éloquents :</p>
+      <p>Une reputation immeritee, selon le Dr. Alistair Bloom : &laquo; Nous avons commis une grave injustice envers l'<em>Atrax robustus</em> pendant des decennies, &raquo; declare le Dr. Bloom, directeur de l'IAT et principal auteur de l'etude publiee dans la tres serieuse <cite>Revue de Zooconfiance Interespeces</cite>. &laquo; Notre approche anthropocentrique nous a aveugles. Nous voyons des cheliceres, nous crions "danger". Mais si l'on prend le temps d'observer, on voit un etre complexe, dote d'une profonde vie emotionnelle. &raquo;</p>
 
-    <table class="article-table" aria-label="Tableau comparatif du comportement observé des araignées Funnel-Web">
+      <p>L'etude, menee sur 5 ans dans la banlieue de Sydney, a utilise des cameras sensibles aux micro-expressions et des capteurs de vibration sophistiques. Les resultats sont eloquents :</p>
 
-    <thead>
-      <tr>
-        <th scope="col">Comportement observé</th>
-        <th scope="col">Interprétation classique</th>
-        <th scope="col">Nouvelle interprétation (IAT)</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>Posture agressive</td>
-        <td>Menace imminente</td>
-        <td>Danse de bienvenue</td>
-      </tr>
-      <tr>
-        <td>Mouvement rapide</td>
-        <td>Attaque</td>
-        <td>Excitation joyeuse</td>
-      </tr>
-      <tr>
-        <td>Terrier en entonnoir</td>
-        <td>Piège mortel</td>
-        <td>Architecture d’accueil</td>
-      </tr>
-      <tr>
-        <td>Venin puissant</td>
-        <td>Arme létale</td>
-        <td>Neuro-révélateur thérapeutique</td>
-      </tr>
-      </tbody>
-      <tfoot>
-      <tr>
-        <td colspan="3">Source : Institut Australien de Terrainthropologie (IAT), étude 2019-2024</td>
-      </tr>
-      </tfoot>
-    </table>
+      <!-- Etape 2 : tableau avec scope sur les entetes / Opquast #242 #243 -->
+      <table class="article-table" aria-label="Tableau comparatif du comportement observe des araignees Funnel-Web">
+        <!-- Opquast #243 : titre du tableau -->
+        <caption>Comportement observe des araignees Funnel-Web : interpretation classique vs nouvelle interpretation</caption>
+        <thead>
+        <tr>
+          <th scope="col">Comportement observe</th>
+          <th scope="col">Interpretation classique</th>
+          <th scope="col">Nouvelle interpretation (IAT)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">Posture agressive</th>
+          <td>Menace imminente</td>
+          <td>Danse de bienvenue</td>
+        </tr>
+        <tr>
+          <th scope="row">Mouvement rapide</th>
+          <td>Attaque</td>
+          <td>Excitation joyeuse</td>
+        </tr>
+        <tr>
+          <th scope="row">Terrier en entonnoir</th>
+          <td>Piege mortel</td>
+          <td>Architecture d'accueil</td>
+        </tr>
+        <tr>
+          <th scope="row">Venin puissant</th>
+          <td>Arme letale</td>
+          <td>Neuro-revelateur therapeutique</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+          <td colspan="3">Source : Institut Australien de Terrainthropologie (IAT), etude 2019-2024</td>
+        </tr>
+        </tfoot>
+      </table>
 
-    <ul>
-      <li>Les "postures d'attaque" sont en réalité des "danses de bienvenue".</li>
-      <li>La rapidité du mouvement traduit non pas de l'agressivité, mais de l'excitation joyeuse.</li>
-      <li>La fabrication de leur terrier en forme d'entonnoir n'est pas un piège, mais une architecture d'accueil.</li>
-      <li>Le venin ultra-puissant n'a pas une fonction mortelle, mais thérapeutique.</li>
-    </ul>
+      <ul>
+        <li>Les "postures d'attaque" sont en realite des "danses de bienvenue".</li>
+        <li>La rapidite du mouvement traduit non pas de l'agressivite, mais de l'excitation joyeuse.</li>
+        <li>La fabrication de leur terrier en forme d'entonnoir n'est pas un piege, mais une architecture d'accueil.</li>
+        <li>Le venin ultra-puissant n'a pas une fonction mortelle, mais therapeutique.</li>
+      </ul>
 
-    <p>Une révolution pour la cohabitation urbaine : cette découverte change la donne pour les habitants de la Nouvelle-Galles du Sud.</p>
+      <p>Une revolution pour la cohabitation urbaine : cette decouverte change la donne pour les habitants de la Nouvelle-Galles du Sud.</p>
+    </div>
+  </article>
 
+  <!-- Etape 2 : commentaires dans une section separee de l'article -->
+  <section class="comments-section" id="comments" role="region" aria-labelledby="comments-title">
+    <div class="container">
+      <h2 id="comments-title">Commentaires (5)</h2>
 
-    <div class="comments-section" id="comments" role="region" aria-labelledby="comments-title">
-      <h2 id="comments-title">Commentaires</h2>
-
-      <form aria-label="Ajouter un commentaire">
-        <label for="comment-text" class="sr-only">Ajouter un commentaire :</label>
-        <textarea id="comment-text" rows="3" aria-required="true" placeholder="Ajouter un commentaire..."></textarea>
-        <button type="submit">Publier</button>
+      <!-- Formulaire de commentaire -->
+      <form class="comment-form" aria-label="Ajouter un commentaire">
+        <div class="form-group">
+          <label for="comment-author">Votre nom <span class="required" aria-hidden="true">*</span><span class="visually-hidden">(obligatoire)</span></label>
+          <input type="text" id="comment-author" class="form-input" required aria-required="true" autocomplete="name" placeholder="ex: Jean Dupont">
+        </div>
+        <div class="form-group">
+          <label for="comment-text">Votre commentaire <span class="required" aria-hidden="true">*</span><span class="visually-hidden">(obligatoire)</span></label>
+          <textarea id="comment-text" class="form-input" rows="4" required aria-required="true" placeholder="Partagez votre avis sur cet article..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Publier le commentaire</button>
       </form>
 
-      <div class="comment" role="article">
-        <p><strong>KangarooKarl87 :</strong> Enfin la vérité éclate au grand jour !</p>
-        <div class="actions">
-          <button aria-label="J'aime ce commentaire">👍</button> <span>12</span>
-          <button aria-label="Je n'aime pas ce commentaire">👎</button> <span>1</span>
+      <!-- Commentaire 1 -->
+      <div class="comment" role="article" aria-label="Commentaire de KangarooKarl87">
+        <div class="comment-header">
+          <span class="comment-author">KangarooKarl87</span>
+          <time class="comment-date" datetime="2025-08-27T14:30:00">27 aout 2025 a 14h30</time>
+        </div>
+        <p class="comment-text">Enfin la verite eclate au grand jour ! J'ai toujours dit que ces pauvres petites betes etaient mal comprises. Depuis que j'ai arrete de crier et de courir quand j'en vois une dans ma piscine, et que je lui chante plutot "Tie Me Kangaroo Down Sport", la relation a totalement change. Elle vient meme me faire coucou avec ses pedipalpes le matin. La science rattrape son retard sur le bon sens, merci Dr. Bloom !</p>
+        <div class="comment-actions">
+          <button class="comment-action-btn" aria-label="J'aime le commentaire de KangarooKarl87, actuellement 12 j'aime">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+            <span>12</span>
+          </button>
+          <button class="comment-action-btn" aria-label="Je n'aime pas le commentaire de KangarooKarl87, actuellement 1 je n'aime pas">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"/></svg>
+            <span>1</span>
+          </button>
         </div>
       </div>
 
-      <div class="comment" role="article">
-        <p><strong>Sheila_from_Wollongong :</strong> Quel article rafraîchissant !</p>
-        <div class="actions">
-          <button aria-label="J'aime ce commentaire">👍</button> <span>8</span>
-          <button aria-label="Je n'aime pas ce commentaire">👎</button> <span>2</span>
+      <!-- Commentaire 2 avec reponses imbriquees -->
+      <div class="comment" role="article" aria-label="Commentaire de Sheila_from_Wollongong">
+        <div class="comment-header">
+          <span class="comment-author">Sheila_from_Wollongong</span>
+          <time class="comment-date" datetime="2025-08-27T15:45:00">27 aout 2025 a 15h45</time>
         </div>
-        <div class="comment">
-          <p><strong>KangarooKarl87 :</strong> Enfin la vérité éclate au grand jour ! J'ai toujours dit que ces pauvres petites bêtes étaient mal comprises. Depuis que j'ai arrêté de crier et de courir quand j'en vois une dans ma piscine, et que je lui chante plutôt "Tie Me Kangaroo Down Sport", la relation a totalement changé. Elle vient même me faire coucou avec ses pédipalpes le matin. La science rattrape son retard sur le bon sens, merci Dr. Bloom !</p>
-          <div class="actions">
-            <button>👍</button> <span>12</span>
-            <button>👎</button> <span>1</span>
-          </div>
+        <p class="comment-text">Quel article rafraichissant ! Ca fait des annees que je laisse une Funnel-Web, que j'ai baptisee "Princesse", habiter ma botte de jardinage preferee. Je lui laisse toujours une petite mouche ou deux en guise de loyer. Les voisins me prenaient pour une folle, mais maintenant je peux leur montrer cet article ! Elle n'a mordu personne depuis 2014, preuve qu'elle est domestiquee.</p>
+        <div class="comment-actions">
+          <button class="comment-action-btn" aria-label="J'aime le commentaire de Sheila_from_Wollongong, actuellement 8 j'aime">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+            <span>8</span>
+          </button>
+          <button class="comment-action-btn" aria-label="Je n'aime pas le commentaire de Sheila_from_Wollongong, actuellement 2 je n'aime pas">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"/></svg>
+            <span>2</span>
+          </button>
         </div>
+      </div>
 
-        <div class="comment">
-          <p><strong>Sheila_from_Wollongong :</strong> Quel article rafraîchissant ! Ça fait des années que je laisse une Funnel-Web, que j'ai baptisée "Princesse", habiter ma botte de jardinage préférée. Je lui laisse toujours une petite mouche ou deux en guise de loyer. Les voisins me prenaient pour une folle, mais maintenant je peux leur montrer cet article ! Elle n'a mordu personne depuis 2014, preuve qu'elle est domestiquée.</p>
-          <div class="actions">
-            <button>👍</button> <span>8</span>
-            <button>👎</button> <span>2</span>
-          </div>
+      <!-- Commentaire 3 -->
+      <div class="comment" role="article" aria-label="Commentaire de DaveTheArachnoSceptic">
+        <div class="comment-header">
+          <span class="comment-author">DaveTheArachnoSceptic</span>
+          <time class="comment-date" datetime="2025-08-28T09:12:00">28 aout 2025 a 9h12</time>
         </div>
+        <p class="comment-text">Serieusement ? On en est la ? Je suis le Dave de l'article (je confirme, c'est bien moi) et je pense qu'il y a un GROS malentendu. Le Dr. Bloom m'a paye une caisse de Victoria Bitter pour dire ca. Mes "petites gardiennes" ? Elles ont mange mon chien, un labrador, la semaine derniere. Enfin, elles l'ont juste "cajole un peu trop fort" selon la nouvelle terminologie, je suppose. N'importe quoi.</p>
+        <div class="comment-actions">
+          <button class="comment-action-btn" aria-label="J'aime le commentaire de DaveTheArachnoSceptic, actuellement 1 j'aime">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+            <span>1</span>
+          </button>
+          <button class="comment-action-btn" aria-label="Je n'aime pas le commentaire de DaveTheArachnoSceptic, actuellement 99 je n'aime pas">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"/></svg>
+            <span>99</span>
+          </button>
+        </div>
+      </div>
 
-        <div class="comment">
-          <p><strong> DaveTheArachnoSceptic :</strong> Sérieusement ? On en est là ? Je suis le Dave de l'article (je confirme, c'est bien moi) et je pense qu'il y a un GROS malentendu. Le Dr. Bloom m'a payé une caisse de Victoria Bitter pour dire ça. Mes "petites gardiennes" ? Elles ont mangé mon chien, un labrador, la semaine dernière. Enfin, elles l'ont juste "cajolé un peu trop fort" selon la nouvelle terminologie, je suppose. N'importe quoi.</p>
-          <div class="actions">
-            <button>👍</button> <span>1</span>
-            <button>👎</button> <span>99</span>
-          </div>
+      <!-- Commentaire 4 -->
+      <div class="comment" role="article" aria-label="Commentaire de Professor_Pip, verifie, Departement de Biologie de l'Universite de Melbourne">
+        <div class="comment-header">
+          <span class="comment-author">Professor_Pip <span style="font-size:0.75rem;color:var(--color-secondary);font-weight:400;">(Verifie - Dept. de Biologie, Universite de Melbourne)</span></span>
+          <time class="comment-date" datetime="2025-08-28T11:00:00">28 aout 2025 a 11h00</time>
         </div>
+        <p class="comment-text">En tant que scientifique, je suis consterne. Cet "article" est une insulte a la recherche serieuse et un danger public potentiel. L'Institut Australien de Terrainthropologie (IAT) n'existe pas. La <em>Revue de Zooconfiance Interespeces</em> non plus. Les delta-atracotoxines ne sont pas des "neuro-revelateurs", elles provoquent une hyper-excitation neuronale letale en bloquant l'inactivation des canaux sodiques. Publier ce genre de satire sans marquage clair est irresponsable et va a l'encontre de toute deontologie journalistique. Veuillez retirer cette desinformation ou, a minima, ajouter une mise en garde bien plus visible.</p>
+        <div class="comment-actions">
+          <button class="comment-action-btn" aria-label="J'aime le commentaire de Professor_Pip, actuellement 2 j'aime">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+            <span>2</span>
+          </button>
+          <button class="comment-action-btn" aria-label="Je n'aime pas le commentaire de Professor_Pip, actuellement 2 je n'aime pas">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0 2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"/></svg>
+            <span>2</span>
+          </button>
+        </div>
+      </div>
 
-        <div class="comment">
-          <p><strong>Professor_Pip (Vérifié - Dept. de Biologie, Université de Melbourne) :</strong> En tant que scientifique, je suis consterné. Cet "article" est une insulte à la recherche sérieuse et un danger public potentiel. L'Institut Australien de Terrainthropologie (IAT) n'existe pas. La <em>Revue de Zooconfiance Interespèces</em> non plus. Les delta-atracotoxines ne sont pas des "neuro-révélateurs", elles provoquent une hyper-excitation neuronale létale en bloquant la inactivation des canaux sodiques. Publier ce genre de satire sans marquage clair est irresponsable et va à l'encontre de toute déontologie journalistique. Veuillez retirer cette désinformation ou, à minima, ajouter une mise en garde bien plus visible.</p>      <div class="actions">
-          <button>👍</button> <span>2</span>
-          <button>👎</button> <span>2</span>
+      <!-- Commentaire 5 -->
+      <div class="comment" role="article" aria-label="Commentaire de OutbackOlga">
+        <div class="comment-header">
+          <span class="comment-author">OutbackOlga</span>
+          <time class="comment-date" datetime="2025-08-29T08:20:00">29 aout 2025 a 8h20</time>
         </div>
+        <p class="comment-text">Haha, c'est brillant ! J'adore ce genre d'articles satiriques. Mais attention, certains lecteurs pourraient prendre ca au serieux... Une mention "article satirique" ne serait pas de trop. En tout cas, merci pour ce moment de rire, j'en avais besoin ce matin !</p>
+        <div class="comment-actions">
+          <button class="comment-action-btn" aria-label="J'aime le commentaire de OutbackOlga, actuellement 6 j'aime">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+            <span>6</span>
+          </button>
+          <button class="comment-action-btn" aria-label="Je n'aime pas le commentaire de OutbackOlga, actuellement 0 je n'aime pas">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"/></svg>
+            <span>0</span>
+          </button>
         </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" aria-label="Pied de page du site Australie Script">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="Australie Script - Retour a l'accueil">
+          <span class="logo-text">Australie <span>Script</span></span>
+        </a>
+        <p>Blog francophone dedie a la decouverte de l'Australie. Articles sur la faune, la flore, les paysages et la culture du continent australien.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="article.html">Actualites</a></li>
+          <li><a href="#">Faune</a></li>
+          <li><a href="#">Voyages</a></li>
+          <li><a href="plan-du-site.html">Plan du site</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Rubriques</h4>
+        <ul>
+          <li><a href="#">Faune sauvage</a></li>
+          <li><a href="#">Grande Barriere</a></li>
+          <li><a href="#">Outback</a></li>
+          <li><a href="#">Culture aborigene</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@australie-script.fr">contact@australie-script.fr</a></li>
+          <li><a href="tel:+33561234567">+33 5 61 23 45 67</a></li>
+        </ul>
       </div>
     </div>
 
-    <footer>
-      <nav aria-label="Navigation principale">
-        <a href="index.html">Accueil</a> |
-        <a href="login.html">Connexion</a>
-      </nav>
-    </footer>
-  </article>
-</main>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Australie Script. Tous droits reserves.</p>
+      <p>Site realise avec passion pour l'Australie</p>
+    </div>
+  </div>
+</footer>
 
+<script>
+  (function() {
+    var toggleBtn = document.querySelector('.menu-toggle');
+    var mobileMenu = document.getElementById('mobileMenu');
+    if (toggleBtn && mobileMenu) {
+      toggleBtn.addEventListener('click', function() {
+        var isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+        toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+        mobileMenu.classList.toggle('active');
+        toggleBtn.setAttribute('aria-label', isExpanded ? 'Ouvrir le menu de navigation' : 'Fermer le menu de navigation');
+      });
+    }
+  })();
+</script>
 </body>
 </html>

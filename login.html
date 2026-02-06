@@ -3,66 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Australie Script</title>
+    <meta name="description" content="Connectez-vous a votre compte Australie Script pour acceder a l'espace membre.">
     <meta name="robots" content="noindex, nofollow">
-    <title>Connexion</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="login-page">
+<!-- Opquast #164 : liens d'acces rapide -->
+<nav class="skip-links" aria-label="Liens d'acces rapide">
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+</nav>
 
-<main class="login-card" aria-labelledby="login-title">
-    <h1 id="login-title">Connexion</h1>
+<!-- HEADER -->
+<header class="header" aria-label="En-tete du site Australie Script">
+    <div class="container">
+        <div class="header-inner">
+            <a href="index.html" class="logo" aria-label="Australie Script - Retour a l'accueil">
+                <span class="logo-text">Australie <span>Script</span></span>
+            </a>
 
-    <form class="login-form" aria-label="Formulaire de connexion">
-        <div class="form-group">
-            <label for="email">Adresse email</label>
-            <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="exemple@email.com"
-                    required
-                    autocomplete="email"
-            >
+            <nav class="nav" id="main-nav" aria-label="Menu principal">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="article.html" class="nav-link">Actualites</a></li>
+                    <li><a href="#" class="nav-link">Faune</a></li>
+                    <li><a href="#" class="nav-link">Voyages</a></li>
+                    <li><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-primary btn-sm" aria-current="page">Espace Membre</a>
+                <button class="menu-toggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Ouvrir le menu de navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
+            </div>
         </div>
+    </div>
+</header>
 
-        <div class="form-group password-container">
-            <label for="password">Mot de passe</label>
-            <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder="Votre mot de passe"
-                    required
-                    autocomplete="current-password"
-            >
-            <label class="show-password">
-                <input type="checkbox" id="togglePassword">
-                Afficher
-            </label>
+<!-- Menu mobile -->
+<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Menu principal mobile">
+    <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Accueil</a></li>
+        <li><a href="article.html" class="mobile-nav-link">Actualites</a></li>
+        <li><a href="#" class="mobile-nav-link">Faune</a></li>
+        <li><a href="#" class="mobile-nav-link">Voyages</a></li>
+        <li><a href="#" class="mobile-nav-link">Contact</a></li>
+        <li><a href="login.html" class="mobile-nav-link" aria-current="page">Espace Membre</a></li>
+    </ul>
+</div>
+
+<!-- MAIN -->
+<main id="main-content" tabindex="-1" aria-label="Contenu principal de la page de connexion">
+
+    <section class="login-section">
+        <div class="login-card">
+            <h1 class="login-title">Connexion</h1>
+            <p class="login-subtitle">Connectez-vous a votre espace membre Australie Script.</p>
+
+            <form aria-label="Formulaire de connexion" action="index.html" method="get">
+
+                <!-- Champ email -->
+                <!-- Etape 3 : autocomplete / Opquast #95 : type email / #97 : autocomplete -->
+                <div class="form-group">
+                    <label for="login-email">Adresse e-mail <span class="required" aria-hidden="true">*</span><span class="visually-hidden">(obligatoire)</span></label>
+                    <input
+                            type="email"
+                            id="login-email"
+                            name="email"
+                            class="form-input"
+                            required
+                            aria-required="true"
+                            autocomplete="email"
+                            placeholder="exemple@mail.com"
+                            inputmode="email"
+                    >
+                </div>
+
+                <!-- Champ mot de passe -->
+                <!-- Opquast #76 : afficher le mot de passe en clair / #95 : type password / #97 : autocomplete -->
+                <div class="form-group">
+                    <label for="login-password">Mot de passe <span class="required" aria-hidden="true">*</span><span class="visually-hidden">(obligatoire)</span></label>
+                    <div class="password-wrapper">
+                        <input
+                                type="password"
+                                id="login-password"
+                                name="password"
+                                class="form-input"
+                                required
+                                aria-required="true"
+                                autocomplete="current-password"
+                                placeholder="Votre mot de passe"
+                        >
+                        <!-- Opquast #76 : bouton afficher/masquer le mot de passe -->
+                        <button
+                                type="button"
+                                class="password-toggle"
+                                aria-label="Afficher le mot de passe"
+                                aria-pressed="false"
+                                id="togglePassword"
+                        >
+                            <!-- Icone oeil ouvert (visible par defaut) -->
+                            <svg class="icon-show" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                            <!-- Icone oeil barre (masque par defaut) -->
+                            <svg class="icon-hide" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                                <line x1="1" y1="1" x2="23" y2="23"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Se connecter</button>
+                </div>
+
+                <div class="form-footer">
+                    <a href="#">Mot de passe oublie ?</a>
+                </div>
+            </form>
         </div>
+    </section>
 
-        <button type="submit" class="btn-submit">
-            Se connecter
-        </button>
-    </form>
-
-    <footer>
-        <nav aria-label="Navigation principale">
-            <a href="index.html">Accueil</a> |
-            <a href="article1.html">Article</a>
-        </nav>
-    </footer>
 </main>
 
+<!-- FOOTER -->
+<footer class="footer" aria-label="Pied de page du site Australie Script">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo" aria-label="Australie Script - Retour a l'accueil">
+                    <span class="logo-text">Australie <span>Script</span></span>
+                </a>
+                <p>Blog francophone dedie a la decouverte de l'Australie.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="article1.html">Actualites</a></li>
+                    <li><a href="plan-du-site.html">Plan du site</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@australie-script.fr">contact@australie-script.fr</a></li>
+                    <li><a href="tel:+33561234567">+33 5 61 23 45 67</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Australie Script. Tous droits reserves.</p>
+            <p>Site realise avec passion pour l'Australie</p>
+        </div>
+    </div>
+</footer>
+
 <script>
-    const togglePassword = document.getElementById('togglePassword');
-    const passwordInput = document.getElementById('password');
+    // Menu mobile
+    (function() {
+        var toggleBtn = document.querySelector('.menu-toggle');
+        var mobileMenu = document.getElementById('mobileMenu');
+        if (toggleBtn && mobileMenu) {
+            toggleBtn.addEventListener('click', function() {
+                var isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+                toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+                mobileMenu.classList.toggle('active');
+                toggleBtn.setAttribute('aria-label', isExpanded ? 'Ouvrir le menu de navigation' : 'Fermer le menu de navigation');
+            });
+        }
+    })();
 
-    togglePassword.addEventListener('change', function () {
-        passwordInput.type = this.checked ? 'text' : 'password';
-    });
+    // Opquast #76 : toggle affichage mot de passe
+    (function() {
+        var toggleBtn = document.getElementById('togglePassword');
+        var passwordInput = document.getElementById('login-password');
+        var iconShow = toggleBtn.querySelector('.icon-show');
+        var iconHide = toggleBtn.querySelector('.icon-hide');
+
+        toggleBtn.addEventListener('click', function() {
+            var isPassword = passwordInput.type === 'password';
+            passwordInput.type = isPassword ? 'text' : 'password';
+            toggleBtn.setAttribute('aria-pressed', String(isPassword));
+            toggleBtn.setAttribute('aria-label', isPassword ? 'Masquer le mot de passe' : 'Afficher le mot de passe');
+            iconShow.style.display = isPassword ? 'none' : 'block';
+            iconHide.style.display = isPassword ? 'block' : 'none';
+        });
+    })();
 </script>
-
 </body>
 </html>

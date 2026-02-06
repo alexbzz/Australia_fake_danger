@@ -1,78 +1,365 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Opquast #232 : meta charset / #233 : UTF-8 -->
     <meta charset="UTF-8">
+    <!-- Opquast #194 : adaptation terminaux mobiles / #193 : zoom non bloque -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon site</title>
+    <!-- Opquast #103 : titre identifie le contenu / #102 : titre identifie le site -->
+    <title>Accueil - Australie Script | Blog sur l'Australie</title>
+    <!-- Opquast #3 : meta description -->
+    <meta name="description" content="Decouvrez l'Australie a travers nos articles sur la faune, les paysages, la culture et les aventures. Blog francophone sur le continent australien.">
+    <!-- Opquast #219 : instructions pour robots d'indexation -->
     <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="styles.css">
+    <!-- Opquast : feuille de style unique -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<a href="#site-title" class="skip-link">Aller à l'accueil</a>
-
-<header class="site-title" aria-label="En-tête du site Fake Danger Australia">
-
-    <h1 id="site-title">Fake Danger Australia</h1>
-    <p id="site-description">Lire nos meilleures articles</p>
-</header>
-
-<nav aria-label="Navigation utilisateur">
-    <div class="login-container">
-        <a href="login.html" class="login-link">Login</a>
-    </div>
+<!-- Opquast #164 : liens d'acces rapide au debut du code source -->
+<nav class="skip-links" aria-label="Liens d'acces rapide">
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <a href="#main-nav" class="skip-link">Aller au menu principal</a>
 </nav>
 
-<main class="articles" aria-labelledby="site-title" aria-describedby="site-description">
+<!-- HEADER -->
+<header class="header" aria-label="En-tete du site Australie ">
+    <div class="container">
+        <div class="header-inner">
+            <!-- Opquast #155 : retour a la page d'accueil -->
+            <a href="index.html" class="logo" aria-label="Australie  - Retour a l'accueil">
+                <span class="logo-text">Australie <span>Script</span></span>
+            </a>
 
+            <nav class="nav" id="main-nav" aria-label="Menu principal">
+                <ul class="nav-list">
+                    <!-- Opquast #157 : item actif signale / aria-current -->
+                    <li><a href="index.html" class="nav-link" aria-current="page">Accueil</a></li>
+                    <li><a href="article1.html" class="nav-link">Actualites</a></li>
+                    <li><a href="#" class="nav-link">Faune</a></li>
+                    <li><a href="#" class="nav-link">Voyages</a></li>
+                    <li><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
 
-    <article id="article1" class="article-card" aria-labelledby="title1" aria-describedby="desc1">
-        <div class="article-text">
-            <h2 id="title1">Article 1</h2>
-            <p id="desc1">Prouve que l'araignée Funnel-Web de Sydney, mortelle, est en réalité une âme sensible cherchant des câlins. Une étude parodique révèle ses "danses de bienvenue" et son venin "thérapeutique".</p>
-            <a href="article1.html" class="read-link" aria-label="Lire l'article 1">Lire ➜</a>
-            <a href="article1.html#comments" class="comment-link" aria-label="Voir les commentaires de l'article 1">💬 Commentaires</a>
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-primary btn-sm">Espace Membre</a>
+                <!-- Bouton menu mobile -->
+                <button class="menu-toggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Ouvrir le menu de navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
+            </div>
         </div>
-        <img src="article1.jpg" alt="Photo illustrant l'article 1" aria-hidden="true">
-    </article>
+    </div>
+</header>
 
+<!-- Menu mobile -->
+<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Menu principal mobile">
+    <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link" aria-current="page">Accueil</a></li>
+        <li><a href="article1.html" class="mobile-nav-link">Actualites</a></li>
+        <li><a href="#" class="mobile-nav-link">Faune</a></li>
+        <li><a href="#" class="mobile-nav-link">Voyages</a></li>
+        <li><a href="#" class="mobile-nav-link">Contact</a></li>
+        <li><a href="login.html" class="mobile-nav-link">Espace Membre</a></li>
+    </ul>
+</div>
 
-    <article id="article2" class="article-card" aria-labelledby="title2" aria-describedby="desc2">
-        <div class="article-text">
-            <h2 id="title2">Article 2</h2>
-            <p id="desc2">Transforme les animaux les plus dangereux d'Australie en expériences bien-être : nager avec les méduses-boîtes devient une thérapie, et le crocodile un coach de relaxation.</p>
+<!-- MAIN CONTENT -->
+<!-- Etape 1 : tabindex -1 sur le main pour le focus programmatique -->
+<main id="main-content" tabindex="-1" aria-label="Contenu principal de la page d'accueil">
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Introduction au blog">
+        <div class="hero-bg">
+            <img src="australie1.jpg" alt="Vue panoramique du port de Sydney avec l'Opera House et le Harbour Bridge au coucher du soleil">
         </div>
-        <img src="article2.jpg" alt="Photo illustrant l'article 2" aria-hidden="true">
-    </article>
-
-
-    <article id="article3" class="article-card" aria-labelledby="title3" aria-describedby="desc3">
-        <div class="article-text">
-            <h2 id="title3">Article 3</h2>
-            <p id="desc3">Révèle le journal intime d'un casoar à casque, dévoilant ses rêves d'artiste et sa mélancolie, loin de son image d'oiseau le plus dangereux du monde.</p>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot" aria-hidden="true"></span>
+                    Blog Francophone
+                </div>
+                <!-- Opquast #234 : structure de titres hierarchisee -->
+                <h1 class="hero-title">
+                    Australie<br><span>Script</span>
+                </h1>
+                <p class="hero-description">
+                    Explorez le continent australien a travers nos articles : faune unique, paysages a couper le souffle, culture aborigene et aventures inoubliables.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#actualites" class="btn btn-primary btn-lg">Nos articles</a>
+                    <a href="#" class="btn btn-outline btn-lg">A propos</a>
+                </div>
+            </div>
         </div>
-        <img src="article3.jpg" alt="Photo illustrant l'article 3" aria-hidden="true">
-    </article>
+    </section>
 
-
-    <article id="article4" class="article-card" aria-labelledby="title4" aria-describedby="desc4">
-        <div class="article-text">
-            <h2 id="title4">Article 4</h2>
-            <p id="desc4">Le gouvernement australien nie tout danger : les pieuvres à anneaux bleus veulent juste partager leurs couleurs, et les crocodiles font des "prises d'accueil vigoureuses".</p>
+    <!-- STATS -->
+    <section class="stats" aria-label="Statistiques du blog">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">120+</div>
+                    <div class="stat-label">Articles publies</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">45</div>
+                    <div class="stat-label">Especes documentees</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Regions explorees</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2.5k</div>
+                    <div class="stat-label">Lecteurs mensuels</div>
+                </div>
+            </div>
         </div>
-        <img src="article4.jpg" alt="Photo illustrant l'article 4" aria-hidden="true">
-    </article>
+    </section>
+
+    <!-- NEWS / ARTICLES -->
+    <section class="news" id="actualites" aria-label="Nos dernieres actualites">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Nos <span>Actualites</span></h2>
+                    <p class="section-description">Retrouvez les derniers articles sur la faune, la flore et les paysages de l'Australie.</p>
+                </div>
+                <a href="#" class="btn btn-secondary">Voir tous les articles</a>
+            </div>
+
+            <div class="articles-grid">
+                <!-- Article 1 - Featured -->
+                <article class="article-card featured">
+                    <div class="article-card-image">
+                        <!-- Etape 1 : images decoratives => alt vide + aria-hidden -->
+                        <img src="article1.jpg" alt="" aria-hidden="true">
+                        <span class="article-card-badge">Faune</span>
+                    </div>
+                    <div class="article-card-content">
+                        <!-- Opquast #6 / #231 : date de publication sous forme programmatique -->
+                        <time class="article-card-date" datetime="2025-08-27">27 aout 2025</time>
+                        <h3 class="article-card-title">Les araignees Sydney Funnel-Web preferent les calins aux morsures : interview exclusive</h3>
+                        <p class="article-card-excerpt">Oubliez tout ce que vous croyez savoir. La redoutee "Funnel-Web" de Sydney ne serait pas une tueuse assoiffee de sang, mais une introvertie incomprise.</p>
+                        <div class="article-card-actions">
+                            <!-- Etape 1 : lien avec aria-label descriptif incluant le nom de l'article -->
+                            <a class="article-card-link" href="article1.html" aria-label="Lire l'article : Les araignees Sydney Funnel-Web preferent les calins aux morsures">
+                                Lire l'article
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </a>
+                            <!-- Etape 1 : lien commentaires avec aria descriptif (nombre + nom article) -->
+                            <!-- Etape 5 / #164 : pas de double lien, commentaires pointe vers #comments -->
+                            <a href="article1.html#comments" class="article-comments-btn" aria-label="52 commentaires sur l'article Les araignees Sydney Funnel-Web preferent les calins aux morsures">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                <span class="visually-hidden">52 commentaires</span>
+                                <span class="comment-count" aria-hidden="true">52</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="article-card">
+                    <div class="article-card-image">
+                        <img src="article2.jpg" alt="" aria-hidden="true">
+                        <span class="article-card-badge">Faune</span>
+                    </div>
+                    <div class="article-card-content">
+                        <time class="article-card-date" datetime="2025-08-20">20 aout 2025</time>
+                        <h3 class="article-card-title">Le koala, cet animal qui dort 22 heures par jour</h3>
+                        <p class="article-card-excerpt">Decouvrez les secrets du mode de vie du koala et pourquoi il passe la grande majorite de son temps a dormir dans les eucalyptus.</p>
+                        <div class="article-card-actions">
+                            <a class="article-card-link" href="article.html" aria-label="Lire l'article : Le koala, cet animal qui dort 22 heures par jour">
+                                Lire l'article
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </a>
+                            <a href="article.html#comments" class="article-comments-btn" aria-label="28 commentaires sur l'article Le koala cet animal qui dort 22 heures par jour">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                <span class="visually-hidden">28 commentaires</span>
+                                <span class="comment-count" aria-hidden="true">28</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
 
 
-    <article id="article5" class="article-card" aria-labelledby="title5" aria-describedby="desc5">
-        <div class="article-text">
-            <h2 id="title5">Article 5</h2>
-            <p id="desc5">Explique comment utiliser la faune dangereuse pour les tâches ménagères : venin de serpent pour coller des timbres, méduses-boîtes comme désinfectant.</p>
+
+                <!-- Article 3 -->
+                <article class="article-card">
+                    <div class="article-card-image">
+                        <img src="article3.jpg" alt="" aria-hidden="true">
+                        <span class="article-card-badge">Voyage</span>
+                    </div>
+                    <div class="article-card-content">
+                        <time class="article-card-date" datetime="2025-08-15">15 aout 2025</time>
+                        <h3 class="article-card-title">Road trip dans l'Outback : 3000 km de terre rouge</h3>
+                        <p class="article-card-excerpt">Recit de notre traversee de l'Outback australien, de Alice Springs a Uluru, en passant par les Olgas.</p>
+                        <div class="article-card-actions">
+                            <a class="article-card-link" href="article.html" aria-label="Lire l'article : Road trip dans l'Outback 3000 km de terre rouge">
+                                Lire l'article
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </a>
+                            <a href="article.html#comments" class="article-comments-btn" aria-label="15 commentaires sur l'article Road trip dans l'Outback 3000 km de terre rouge">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                <span class="visually-hidden">15 commentaires</span>
+                                <span class="comment-count" aria-hidden="true">15</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="article-card">
+                    <div class="article-card-image">
+                        <img src="article4.jpg" alt="" aria-hidden="true">
+                        <span class="article-card-badge">Nature</span>
+                    </div>
+                    <div class="article-card-content">
+                        <time class="article-card-date" datetime="2025-08-10">10 aout 2025</time>
+                        <h3 class="article-card-title">Grande Barriere de Corail : un ecosysteme en sursis</h3>
+                        <p class="article-card-excerpt">Etat des lieux de la Grande Barriere de Corail, entre blanchissement massif et efforts de preservation.</p>
+                        <div class="article-card-actions">
+                            <a class="article-card-link" href="article.html" aria-label="Lire l'article : Grande Barriere de Corail un ecosysteme en sursis">
+                                Lire l'article
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </a>
+                            <a href="article.html#comments" class="article-comments-btn" aria-label="42 commentaires sur l'article Grande Barriere de Corail un ecosysteme en sursis">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                <span class="visually-hidden">42 commentaires</span>
+                                <span class="comment-count" aria-hidden="true">42</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="article-card">
+                    <div class="article-card-image">
+                        <img src="article5.jpg" alt="" aria-hidden="true">
+                        <span class="article-card-badge">Faune</span>
+                    </div>
+                    <div class="article-card-content">
+                        <time class="article-card-date" datetime="2025-08-05">5 aout 2025</time>
+                        <h3 class="article-card-title">Kangourous : les vrais rois de l'Australie</h3>
+                        <p class="article-card-excerpt">Portrait du kangourou roux, le plus grand marsupial vivant, et de son role essentiel dans l'ecosysteme australien.</p>
+                        <div class="article-card-actions">
+                            <a class="article-card-link" href="article.html" aria-label="Lire l'article : Kangourous les vrais rois de l'Australie">
+                                Lire l'article
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            </a>
+                            <a href="article.html#comments" class="article-comments-btn" aria-label="37 commentaires sur l'article Kangourous les vrais rois de l'Australie">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                <span class="visually-hidden">37 commentaires</span>
+                                <span class="comment-count" aria-hidden="true">37</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </div>
-        <img src="article5.jpg" alt="Photo illustrant l'article 5" aria-hidden="true">
-    </article>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" aria-label="Inscription a la newsletter">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Envie de decouvrir l'Australie ?</h2>
+                <p class="cta-description">Abonnez-vous a notre newsletter pour recevoir les derniers articles et recits de voyage directement dans votre boite mail.</p>
+                <a href="#" class="btn btn-primary btn-lg">S'abonner</a>
+            </div>
+        </div>
+    </section>
 
 </main>
 
+<!-- FOOTER -->
+<footer class="footer" aria-label="Pied de page du site Australie Script">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo" aria-label="Australie Script - Retour a l'accueil">
+                    <span class="logo-text">Australie <span>Script</span></span>
+                </a>
+                <p>Blog francophone dedie a la decouverte de l'Australie. Articles sur la faune, la flore, les paysages et la culture du continent australien.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Facebook (ouvre dans le meme onglet)">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram (ouvre dans le meme onglet)">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube (ouvre dans le meme onglet)">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="article1.html">Actualites</a></li>
+                    <li><a href="#">Faune</a></li>
+                    <li><a href="#">Voyages</a></li>
+                    <!-- Opquast #171 : plan du site disponible depuis chaque page -->
+                    <li><a href="plan-du-site.html">Plan du site</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Rubriques</h4>
+                <ul>
+                    <li><a href="#">Faune sauvage</a></li>
+                    <li><a href="#">Grande Barriere</a></li>
+                    <li><a href="#">Outback</a></li>
+                    <li><a href="#">Culture aborigene</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@australie-script.fr">contact@australie-script.fr</a></li>
+                    <li><a href="tel:+33561234567">+33 5 61 23 45 67</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Australie Script. Tous droits reserves.</p>
+            <p>Site realise avec passion pour l'Australie</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Menu mobile toggle
+    (function() {
+        var toggleBtn = document.querySelector('.menu-toggle');
+        var mobileMenu = document.getElementById('mobileMenu');
+        if (toggleBtn && mobileMenu) {
+            toggleBtn.addEventListener('click', function() {
+                var isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+                toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+                mobileMenu.classList.toggle('active');
+                // Mise a jour du label
+                toggleBtn.setAttribute('aria-label', isExpanded ? 'Ouvrir le menu de navigation' : 'Fermer le menu de navigation');
+            });
+        }
+    })();
+</script>
 </body>
 </html>
